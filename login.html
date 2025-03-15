@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>會員登入</h1>
+    </header>
+    <main>
+        <button id="google-login">使用 Google 登入</button>
+        <button id="discord-login">使用 Discord 登入</button>
+    </main>
+    <script>
+        document.getElementById("google-login").addEventListener("click", function() {
+            window.location.href = "/auth/google"; // Google OAuth 登入路徑
+        });
+        
+        document.getElementById("discord-login").addEventListener("click", function() {
+            window.location.href = "/auth/discord"; // Discord OAuth 登入路徑
+        });
+    </script>
+</body>
+</html>
